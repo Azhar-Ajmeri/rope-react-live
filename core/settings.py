@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-1)k*vpk@m!b!f22-(o4+c)nlyn%ay+7myiq#6u*9_g8@m$)o-8
 DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'rope-live.herokuapp.com/', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -84,6 +84,13 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+'''DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'RopeDatabase',
         'USER':'postgres',
@@ -91,7 +98,7 @@ DATABASES = {
         'HOST':'localhost',
         'PORT':'5432',
     }
-}
+}'''
 
 
 # Password validation
