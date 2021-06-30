@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-1)k*vpk@m!b!f22-(o4+c)nlyn%ay+7myiq#6u*9_g8@m$)o-8
 DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = ['*', 'rope-live.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*', 'rope-live.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
