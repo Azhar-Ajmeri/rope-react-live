@@ -11,7 +11,7 @@ class DocumentUploadView(APIView):
 # together in order to fully support HTML form data."
     parser_classes = (MultiPartParser, FormParser)
     def post(self, request, *args, **kwargs):
-        file_serializer = DocumentSerializer(data=request.data)
+        file_serializer = DocumentSerializer(data=request.data, context={"request": request})
         if file_serializer.is_valid():
             file_serializer.save()
             return Response(file_serializer.data, status=status.HTTP_201_CREATED)
